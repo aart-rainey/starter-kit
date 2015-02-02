@@ -2,7 +2,10 @@
 
 var gulp = require('gulp'),
     connect = require('gulp-connect'),
-    opn = require('opn');
+    concatCss = require('gulp-concat-css'),
+    minifyCSS = require('gulp-minify-css'),
+    opn = require('opn'),
+    wiredep = require('wiredep').stream;
 
 // Connect to server
 gulp.task('connect', function(){
@@ -28,7 +31,18 @@ gulp.task('js', function(){
 //css
 gulp.task('css', function(){
   gulp.src('app/css/*.css')
+      .pipe(concatCss("bundle.css"))
+      .pipe(minifyCSS({keepBreaks:true}))
       .pipe(connect.reload());
+});
+
+// bower
+gulp.task('bower', function(){
+  gulp.src('app/*.html')
+      .pipe(wiredep({
+        directory: 'app/bower_components'
+      }))
+      .pipe(gulp.dest('app'));
 });
 
 // watching
@@ -36,6 +50,9 @@ gulp.task('watch', function(){
   gulp.watch(['app/*.html'], ['html']);
   gulp.watch(['app/css/*.css'], ['css']);
   gulp.watch(['app/js/*.js'], ['js']);
+  gulp.watch(['bower.json'], ['bower']);
 });
+
+
 
 gulp.task('default', ['connect', 'watch']);
