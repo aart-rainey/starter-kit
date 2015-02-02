@@ -1,0 +1,19 @@
+{
+  "name": "icebag",
+  "version": "0.0.1",
+  "authors": [
+    "Arthur Hlopin <aart.rainey@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "~3.0.2",
+    "jquery": "1.9"
+  }
+}
