@@ -1,0 +1,73 @@
+body{
+    background: #05121e;
+}
+.wrapper{
+    position: relative;
+}
+.wrapper__snow{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/snow.png) center center no-repeat;
+}
+
+.wrapper__top{
+    background: url(../img/header.png) center center no-repeat;
+    display: block;
+    height: 513px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+.container{
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.navigation{
+    width: 381px;
+    height: 277px;
+    display: block;
+    position: absolute;
+    background: url(../img/rounds.png);
+    top: 0;
+    left: 300px;
+}
+.header-logo{
+    display: block;
+    position: absolute;
+    text-indent: -9999px;
+}
+.main-logo{
+    width: 255px;
+    height: 257px;
+    background: url(../img/logo.png);
+    top: 20px;
+    left: 20px;
+}
+.support-logo{
+    width: 98px;
+    height: 98px;
+    background-image: url(../img/support-logo.png);
+    right: 10px;
+    top: 15px;
+}
+
+.wrapper__main{
+    background: url(../img/main-bg.png) center center no-repeat;
+    position: relative;
+    display: block;
+    height: 1032px;
+    z-index: 1;
+    margin-top: -200px;
+}
+
+.icebag{
+    width: 528px;
+    height: 818px;
+    position: absolute;
+    background: url(../img/icebag.png);
+}

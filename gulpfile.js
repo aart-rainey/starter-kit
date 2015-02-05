@@ -31,9 +31,10 @@ gulp.task('js', function(){
 //css
 gulp.task('css', function(){
   gulp.src('app/css/*.css')
-      .pipe(concatCss("bundle.css"))
+      //.pipe(concatCss("bundle.css"))
       .pipe(minifyCSS({keepBreaks:true}))
       .pipe(connect.reload());
+      //.pipe(gulp.dest('app/css'));
 });
 
 // bower

@@ -1,0 +1,15 @@
+{
+  "name": "root/starter_kit",
+  "authors": [
+    {
+      "name": "Arthur Hlopin",
+      "email": "aart.rainey@gmail.com"
+    }
+  ],
+  "require": {
+    "phpmailer/phpmailer" : "dev-master"
+  },
+  "config": {
+    "vendor-dir": "app/php/composer"
+  }
+}
